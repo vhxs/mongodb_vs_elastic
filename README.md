@@ -1,5 +1,8 @@
 ## Elasticsearch and MongoDB notes
 This is me experimenting with Elasticsearch and MongoDB in Docker containers running on my laptop. 
+- [x] set up skeleton docker containers running ES, Mongo, and a Flask app
+- [ ] write ES and Mongo queries to insert random data in each datastore, respectively
+- [ ] Compare latencies
 
 Elasticsearch and MongoDB are both datastores. Elasticsearch is marketed as a *search engine* while MongoDB as a document-oriented NoSQL *database*.
 
