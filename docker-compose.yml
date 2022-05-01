@@ -1,0 +1,22 @@
+version: "3.9"
+services:
+  elasticsearch:
+    image: docker.elastic.co/elasticsearch/elasticsearch:8.1.3
+    ports:
+      - "9200:9200"
+    environment:
+      - "discovery.type=single-node"
+    volumes:
+      - ./data/elasticsearch/:/usr/share/elasticsearch/data
+  mongodb:
+    image: mongo
+    ports:
+      - "27017:27017"
+    volumes:
+      - ./data/mongo/:/data/db
+  application:
+    build:
+      context: ./application
+      dockerfile: Dockerfile
+    ports:
+      - "8080:8080"
